@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Installa dipendenze (npm install)",
+      "type": "shell",
+      "command": "npm install",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "close": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Avvia il progetto (npm run dev)",
+      "type": "shell",
+      "command": "npm run dev",
+      "dependsOn": "Installa dipendenze (npm install)",
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "clear": true,
+        "close": false
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
